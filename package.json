@@ -1,0 +1,14 @@
+{
+  "name": "algs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "findMedianSortedArrays.js",
+  "scripts": {
+    "test": "jest --watchAll"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^28.1.1"
+  }
+}
