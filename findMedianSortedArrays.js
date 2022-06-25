@@ -3,18 +3,16 @@ function findMedianSortedArrays(nums1, nums2) {
   let steps = l / 2 + 1;
   let s = [];
 
-  while (steps > 0) {
+  for (let i = 0; i < steps; i++) {
     if (nums1.length && nums2.length) {
-      a = nums1.at(-1) > nums2.at(-1) ? nums1.pop() : nums2.pop();
+      nums1.at(-1) > nums2.at(-1) ? s.push(nums1.pop()) : s.push(nums2.pop());
     } else if (!nums2.length) {
-      a = nums1.pop();
+      s.push(nums1.pop());
     } else {
-      a = nums2.pop();
+      s.push(nums2.pop());
     }
 
-    s.push(a);
     if (s.length > 2) s.shift();
-    steps--;
   }
 
   if (l % 2 === 0) return s.reduce((a, b) => a + b) / 2;
